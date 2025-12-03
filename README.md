@@ -1,54 +1,68 @@
-# retail-sales-analysis
-Retail sales analytics project in Python
+# Retail Sales & Profitability Analysis
 
-# Retail Sales & Profit Analysis
+## Problem Statement
+The objective of this project is to analyze retail sales data to understand
+profitability, customer behavior, and regional performance in order to support
+better business decision-making.
 
-## Objective
-Analyze retail sales data to identify profit drivers, loss-making categories,
-regional performance, and growth trends so that management can take better
-data-driven decisions.
+---
 
-## Dataset
-- Sample Superstore sales dataset (from Kaggle)
-- Contains order-level details: Orders, Customers, Region, Category, Sales, Profit, etc.
+## Summary of Insights
 
-## Tools Used
-- Python
-- Pandas
-- Matplotlib
-- Jupyter Notebook
+### Category Performance
+- Technology and Copiers are the strongest profit contributors
+- Furniture and Tables consistently generate losses
 
-## Key Analysis Performed
-- Category & sub-category wise sales and profit
-- Region and state level performance
-- Customer segment analysis
-- Top and bottom customers by profit
-- Monthly sales trend (time series)
-- Profit margin analysis (Profit / Sales)
+### Regional Performance
+- West and East regions outperform Central and South
+- California and New York lead profitability
+- Texas and Ohio are major loss-driving states
 
-## Key Insights
-- Technology and Office Supplies have the highest profit margins.
-- Furniture generates good revenue but very poor margins.
-- West and East regions are the best performers.
-- States like Texas and Illinois are strongly loss-making.
-- A small group of customers contributes a large share of total profit.
-- Sales show clear seasonality and an overall upward trend.
+### Customer Behavior
+- A small percentage of customers generate most of the profit
+- Several customers have high revenue but result in losses
 
-## Advanced Analysis – Profit Margin
-Instead of looking only at revenue, a profit margin column was created:
-> Profit Margin = Profit / Sales
+---
 
-This helped reveal hidden financial leakage where high sales still produced
-negative or very low profit, especially in some states and categories.
+## Customer Segmentation (Clustering)
+
+Customers were grouped based on:
+- Total Sales  
+- Total Profit  
+- Order Frequency  
+- Discount Usage  
+- Profit Margin  
+
+### Customer Groups
+
+### 🔴 Cluster 0 — Loss / High-Risk Customers
+Low or negative profit due to heavy discounts and weak margins.
+
+### 🟡 Cluster 1 — Average Customers
+Stable revenue with moderate profitability.
+
+### 🟢 Cluster 2 — High-Value Customers
+Customers contributing the majority of overall profit with strong margins.
+
+---
+
+## Key Insight
+
+> High revenue does not guarantee profitability.  
+> Retaining high-value customers delivers more impact than increasing sales volume.
+
+---
 
 ## Business Recommendations
-- Focus more on high-margin categories (Technology, Office Supplies).
-- Revisit pricing and discount strategy for Furniture, especially Tables.
-- Audit operations and pricing in loss-making states like Texas and Illinois.
-- Strengthen loyalty strategies for high-profit customers.
-- Use seasonality patterns to plan inventory and marketing before peak months.
+- Reduce discounting for loss-making customers
+- Focus retention strategies on high-value customers
+- Improve pricing policies in loss-prone states
+- Optimize product categories based on profitability
 
-## Outcome
-This project demonstrates end-to-end business analytics:
-data cleaning, exploratory data analysis, visualization, margin analysis, and
-strategy-focused recommendations using Python.
+---
+
+## Files in this Repository
+- `Retail sales analysis.ipynb` — analysis with customer segmentation
+- `Sample - Superstore.csv` — dataset
+
+---
